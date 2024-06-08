@@ -1,0 +1,63 @@
+.container{
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    background-color: #f1f1f1;
+    flex-direction: column;
+}
+
+.container .welcome{
+    color: #333;
+    text-align: center;
+    padding: 60px ;
+}
+
+.container h1{
+    font-size: 2rem;
+    color: #333;
+    text-align: center;
+}
+
+.options{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    gap: 50px;
+    margin-top: 20px;
+}
+
+.options img{
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    border-radius: 50%;
+    margin: 0 20px;
+}
+
+.mentor_signin{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.mentee_signin{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* .options a{
+    text-decoration: none;
+    color: #333;
+    padding: 10px 20px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    margin: 0 10px;
+    transition: all 0.3s;
+}
+
+.options a:hover{
+    background-color: #333;
+    color: #fff;
+} */
+
