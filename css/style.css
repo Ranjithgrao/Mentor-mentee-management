@@ -12,7 +12,9 @@ nav {
 }
 
 nav .logo img {
-    width: 500px;
+    box-sizing: border-box;
+    max-width: 500px;
+    width: 100%;
     padding: 25px 35px 20px 45px;
 }
 
@@ -95,14 +97,14 @@ form input[type="password"]:focus {
     }
 
     nav .logo img {
-        width: 450px;
+        /* width: 100%; */
         padding: 30px 35px 20px 35px;
     }
 }
 
 @media screen and (max-width: 1278px) {
     nav .logo img {
-        width: 450px;
+        /* width: 100%; */
         padding: 30px 35px 20px 35px;
     }
 }
