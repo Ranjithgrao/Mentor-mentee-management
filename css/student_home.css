@@ -163,3 +163,7 @@ tr:hover {
       float: none;
     }
   }
+
+  .sidebar.hidden {
+    display: none;
+}

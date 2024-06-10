@@ -79,3 +79,8 @@ function printPage() {
 document.addEventListener('DOMContentLoaded', function() {
     showSection('profile');
 });
+
+document.getElementById('sidebarToggle').addEventListener('click', function() {
+    var sidebar = document.querySelector('.sidebar');
+    sidebar.classList.toggle('hidden');
+});

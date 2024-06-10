@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Marks</title>
+    <link rel="stylesheet" href="css\admin.css">
+    <link rel="stylesheet" href="css\style.css">
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            <img src="assets\images\logo.jpg" alt="logo">
+        </div>
+        <div class="dept">
+            <h1>Department of Computer Science and Engineering</h1>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="sidebar">
+            <ul>
+                <li><a href="admin_students.html">Add Students</a></li>
+                <li><a href="admin_teachers.html">Add Teachers</a></li>
+                <li><a href="admin_marks.html">Add Marks</a></li>
+                <li><a href="admin_sign_out.html">Sign Out</a></li>
+            </ul>
+        </div>
+        <div id="marks" class="section">
+            <h2>Add Student Marks</h2>
+            <div class="marks-header">
+                <label for="semester">Year/Semester:</label>
+                <select id="semester" name="semester">
+                    <option value="I">I</option>
+                    <option value="II">II</option>
+                    <option value="III">III</option>
+                    <option value="IV">IV</option>
+                    <option value="V">V</option>
+                    <option value="VI">VI</option>
+                </select>
+                <button onclick="uploadMarks()">Upload</button>
+            </div>
+            <div class="student-info">
+                <div class="info-field"><span class="field-name">Enrollment No.:</span> 
+                    <span class="field-value">
+                        <input type="text" id="enrollment_no" name="enrollment_no" required>
+                    </span>
+                </div>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Subject Code</th>
+                        <th>Marks</th>
+                    </tr>
+                </thead>
+                <tbody id="marks-table-body">
+                    <!-- Dynamically table must be displayed based on the semester selected with first column being subject code and second column being input field for marks -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="js/admin_marks.js"></script>
+</body>
+
+</html>

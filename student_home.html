@@ -17,6 +17,7 @@
         </div>
     </nav>
     <div class="container">
+        <!-- <button id="sidebarToggle">Toggle Sidebar</button> -->
         <div class="sidebar">
             <ul>
                 <li><a href="#" onclick="showSection('profile')">Profile</a></li>
@@ -39,7 +40,7 @@
                 <div class="profile-field"><span class="field-name">Teacher Guardian Name:</span> <span class="field-value">Dr. Smith</span></div>
                 <div class="profile-field"><span class="field-name">Teacher Guardian Email:</span> <span class="field-value">drsmith@example.com</span></div>
             </div>
-            <div id="marks" class="section" style="display:none;">
+            <div id="marks" class="section" >
                 <h2>Student Marks</h2>
                 <div class="marks-header">
                     <label for="semester">Year/Semester:</label>
@@ -73,8 +74,24 @@
                 </table>
             </div>
             <div id="achievements" class="section" style="display:none;">Achievements Section: Your achievements!</div>
-            <div id="apply_achievements" class="section" style="display:none;">Apply for Achievements Section!</div>
-            <div id="sign_out" class="section" style="display:none;">Sign Out Section: Are you sure you want to sign out?</div>
+            <div id="apply_achievements" class="section" style="display:none;">
+                <h2>Apply for Achievements</h2>
+                <form action="apply_achievements.php" method="POST">
+                    <div class="form-field">
+                        <label for="achievement">Achievement:</label>
+                        <select id="achievement" name="achievement">
+                            <option value="1">Sports</option>
+                            <option value="2">Cultural</option>
+                            <option value="3">Academic</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-field submit">
+                        <button type="submit">Apply</button>
+                    </div>
+                </form>
+            </div>
+            <div id="sign_out" class="section" >Sign Out Section: Are you sure you want to sign out?</div>
         </div>
     </div>
     <script src="js\scripts.js"></script>
