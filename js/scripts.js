@@ -1,6 +1,6 @@
 function showSection(sectionId) {
     var sections = document.querySelectorAll('.section');
-    sections.forEach(function(section) {
+    sections.forEach(function (section) {
         section.style.display = 'none';
     });
     document.getElementById(sectionId).style.display = 'block';
@@ -8,8 +8,7 @@ function showSection(sectionId) {
 
 function showMarks() {
     var semester = document.getElementById('semester').value;
-    document.getElementById('selected-semester').textContent = semester;
-    
+
     var marksTableBody = document.getElementById('marks-table-body');
     marksTableBody.innerHTML = '';
 
@@ -59,7 +58,7 @@ function showMarks() {
     };
 
     var selectedMarks = marksData[semester] || [];
-    selectedMarks.forEach(function(item) {
+    selectedMarks.forEach(function (item) {
         var row = document.createElement('tr');
         var subjectCell = document.createElement('td');
         subjectCell.textContent = item.subject;
@@ -76,18 +75,17 @@ function printPage() {
 }
 
 // Show the profile section by default on page load
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     showSection('profile');
 });
 
-document.getElementById('sidebarToggle').addEventListener('click', function() {
+document.getElementById('sidebarToggle').addEventListener('click', function () {
     var sidebar = document.querySelector('.sidebar');
     sidebar.classList.toggle('hidden');
 });
 
 function showStudents() {
     var semester = document.getElementById('semester').value;
-    // document.getElementById('selected-semester').textContent = semester;
 
     var studentsTableBody = document.getElementById('students-table-body');
     studentsTableBody.innerHTML = '';
@@ -104,7 +102,7 @@ function showStudents() {
         { enrollment: '2020CSE009', name: 'Grace', semester: 'III' },
         { enrollment: '2020CSE010', name: 'Helen', semester: 'IV' },
         { enrollment: '2020CSE011', name: 'Ivy', semester: 'V' },
-        { enrollment: '2020CSE012', name: 'Jack', semester: 'VI'},
+        { enrollment: '2020CSE012', name: 'Jack', semester: 'VI' },
         { enrollment: '2020CSE013', name: 'Kevin', semester: 'I' },
         { enrollment: '2020CSE014', name: 'Lily', semester: 'II' },
         { enrollment: '2020CSE015', name: 'Mike', semester: 'III' },
@@ -113,11 +111,11 @@ function showStudents() {
         { enrollment: '2020CSE018', name: 'Peter', semester: 'VI' }
     ];
 
-    var filteredStudentsData = studentsData.filter(function(item) {
+    var filteredStudentsData = studentsData.filter(function (item) {
         return item.semester === semester;
     });
 
-    filteredStudentsData.forEach(function(item) {
+    filteredStudentsData.forEach(function (item) {
         var row = document.createElement('tr');
         var enrollmentCell = document.createElement('td');
         enrollmentCell.textContent = item.enrollment;
@@ -128,7 +126,7 @@ function showStudents() {
         var detailsCell = document.createElement('td');
         var detailsButton = document.createElement('button');
         detailsButton.textContent = 'Show Details';
-        detailsButton.addEventListener('click', function() {
+        detailsButton.addEventListener('click', function () {
             alert('Details for ' + item.name
                 + '\nEnrollment: ' + item.enrollment
                 + '\nSemester: ' + item.semester
@@ -146,5 +144,75 @@ function showStudents() {
         detailsCell.appendChild(detailsButton);
         row.appendChild(detailsCell);
         studentsTableBody.appendChild(row);
+    });
+}
+
+function showAttendance() {
+    var semester = document.getElementById('semester').value;
+
+    var attendanceTableBody = document.getElementById('attendance-table-body');
+    attendanceTableBody.innerHTML = '';
+
+    var attendanceData = {
+        'I': [
+            { subject: 'CSE101', total: 40, present: 35 },
+            { subject: 'CSE102', total: 40, present: 36 },
+            { subject: 'CSE103', total: 40, present: 38 },
+            { subject: 'CSE104', total: 40, present: 37 },
+            { subject: 'CSE105', total: 40, present: 39 }
+        ],
+        'II': [
+            { subject: 'CSE201', total: 45, present: 40 },
+            { subject: 'CSE202', total: 45, present: 41 },
+            { subject: 'CSE203', total: 45, present: 43 },
+            { subject: 'CSE204', total: 45, present: 42 },
+            { subject: 'CSE205', total: 45, present: 44 }
+        ],
+        'III': [
+            { subject: 'CSE301', total: 40, present: 35 },
+            { subject: 'CSE302', total: 40, present: 36 },
+            { subject: 'CSE303', total: 40, present: 38 },
+            { subject: 'CSE304', total: 40, present: 37 },
+            { subject: 'CSE305', total: 40, present: 39 }
+        ],
+        'IV': [
+            { subject: 'CSE401', total: 40, present: 35 },
+            { subject: 'CSE402', total: 40, present: 36 },
+            { subject: 'CSE403', total: 40, present: 38 },
+            { subject: 'CSE404', total: 40, present: 37 },
+            { subject: 'CSE405', total: 40, present: 39 }
+        ],
+        'V': [
+            { subject: 'CSE501', total: 40, present: 35 },
+            { subject: 'CSE502', total: 40, present: 36 },
+            { subject: 'CSE503', total: 40, present: 38 },
+            { subject: 'CSE504', total: 40, present: 37 },
+            { subject: 'CSE505', total: 40, present: 39 }
+        ],
+        'VI': [
+            { subject: 'CSE601', total: 40, present: 35 },
+            { subject: 'CSE602', total: 40, present: 36 },
+            { subject: 'CSE603', total: 40, present: 38 },
+            { subject: 'CSE604', total: 40, present: 37 },
+            { subject: 'CSE605', total: 40, present: 39 }
+        ]
+    };
+
+    var selectedAttendance = attendanceData[semester] || [];
+    selectedAttendance.forEach(function (item) {
+        var row = document.createElement('tr');
+        var subjectCell = document.createElement('td');
+        subjectCell.textContent = item.subject;
+        var totalCell = document.createElement('td');
+        totalCell.textContent = item.total;
+        var presentCell = document.createElement('td');
+        presentCell.textContent = item.present;
+        var percentageCell = document.createElement('td');
+        percentageCell.textContent = ((item.present / item.total) * 100).toFixed(2) + '%';
+        row.appendChild(subjectCell);
+        row.appendChild(totalCell);
+        row.appendChild(presentCell);
+        row.appendChild(percentageCell);
+        attendanceTableBody.appendChild(row);
     });
 }
