@@ -35,6 +35,8 @@ function updateTable() {
         const marksCell = document.createElement("td");
         const marksInput = document.createElement("input");
         marksInput.type = "number";
+        marksInput.min = 0;
+        marksInput.max = 100;
         marksInput.name = `marks_${subject}`;
         marksCell.appendChild(marksInput);
         row.appendChild(marksCell);
@@ -46,6 +48,27 @@ function updateTable() {
 
 // Function to handle the upload button click (you can expand this to include actual upload logic)
 function uploadMarks() {
-    // Placeholder function for uploading marks
+    // Get all the input fields
+    const inputs = document.querySelectorAll('input[type="number"]');
+    const enrollmentInputs = document.querySelectorAll('input[type="text"]');
+
+    // Validate each input
+    for (let input of inputs) {
+        const value = Number(input.value);
+        if (isNaN(value) || value < 0 || value > 100) {
+            alert("Invalid input: " + input.name);
+            return;
+        }
+    }
+
+    for (let input of enrollmentInputs) {
+        const value = input.value;
+        if (!/^\d{9}$/.test(value)) {
+            alert("Invalid enrollment number: " + value);
+            return;
+        }
+    }
+
+    // If all inputs are valid, continue with the upload
     alert("Marks uploaded!");
 }
