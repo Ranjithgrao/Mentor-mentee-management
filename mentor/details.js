@@ -334,5 +334,7 @@ window.onload = function() {
     }
     else {
         document.getElementById('not-found').style.display = 'block';
+        document.getElementById('details').style.display = 'none';
+        
     }
 }
