@@ -84,69 +84,6 @@ document.getElementById('sidebarToggle').addEventListener('click', function () {
     sidebar.classList.toggle('hidden');
 });
 
-function showStudents() {
-    var semester = document.getElementById('semester').value;
-
-    var studentsTableBody = document.getElementById('students-table-body');
-    studentsTableBody.innerHTML = '';
-
-    var studentsData = [
-        { enrollment: '2020CSE001', name: 'John Doe', semester: 'I' },
-        { enrollment: '2020CSE002', name: 'Jane Doe', semester: 'II' },
-        { enrollment: '2020CSE003', name: 'Alice', semester: 'III' },
-        { enrollment: '2020CSE004', name: 'Bob', semester: 'IV' },
-        { enrollment: '2020CSE005', name: 'Charlie', semester: 'V' },
-        { enrollment: '2020CSE006', name: 'David', semester: 'VI' },
-        { enrollment: '2020CSE007', name: 'Eve', semester: 'I' },
-        { enrollment: '2020CSE008', name: 'Frank', semester: 'II' },
-        { enrollment: '2020CSE009', name: 'Grace', semester: 'III' },
-        { enrollment: '2020CSE010', name: 'Helen', semester: 'IV' },
-        { enrollment: '2020CSE011', name: 'Ivy', semester: 'V' },
-        { enrollment: '2020CSE012', name: 'Jack', semester: 'VI' },
-        { enrollment: '2020CSE013', name: 'Kevin', semester: 'I' },
-        { enrollment: '2020CSE014', name: 'Lily', semester: 'II' },
-        { enrollment: '2020CSE015', name: 'Mike', semester: 'III' },
-        { enrollment: '2020CSE016', name: 'Nancy', semester: 'IV' },
-        { enrollment: '2020CSE017', name: 'Oliver', semester: 'V' },
-        { enrollment: '2020CSE018', name: 'Peter', semester: 'VI' }
-    ];
-
-    var filteredStudentsData = studentsData.filter(function (item) {
-        return item.semester === semester;
-    });
-
-    filteredStudentsData.forEach(function (item) {
-        var row = document.createElement('tr');
-        var enrollmentCell = document.createElement('td');
-        enrollmentCell.textContent = item.enrollment;
-        var nameCell = document.createElement('td');
-        nameCell.textContent = item.name;
-        var semesterCell = document.createElement('td');
-        semesterCell.textContent = item.semester;
-        var detailsCell = document.createElement('td');
-        var detailsButton = document.createElement('button');
-        detailsButton.textContent = 'Show Details';
-        detailsButton.addEventListener('click', function () {
-            alert('Details for ' + item.name
-                + '\nEnrollment: ' + item.enrollment
-                + '\nSemester: ' + item.semester
-                + '\nEmail: ' + item.enrollment.toLowerCase() + '@example.com'
-                + '\nPhone: 1234567890'
-                + '\nAddress: 123, Example Street, City, State, Country - 123456'
-                + '\nParent Name: Parent Doe'
-                + '\nParent Email: parentdoe@example.com'
-                + '\nParent Phone: 0987654321'
-            );
-        });
-        row.appendChild(enrollmentCell);
-        row.appendChild(nameCell);
-        row.appendChild(semesterCell);
-        detailsCell.appendChild(detailsButton);
-        row.appendChild(detailsCell);
-        studentsTableBody.appendChild(row);
-    });
-}
-
 function showAttendance() {
     var semester = document.getElementById('semester').value;
 

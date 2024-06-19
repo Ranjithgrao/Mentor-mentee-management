@@ -1,4 +1,4 @@
-.container {
+.admin-container {
     display: flex;
     flex: 1;
 }
@@ -95,7 +95,6 @@ h2 {
     align-items: center;
     margin-bottom: 20px;
     flex-direction: column;
-    justify-content: space-between;
 }
 
 .uploadMarks label {
