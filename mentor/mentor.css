@@ -26,7 +26,7 @@ body {
     box-sizing: border-box;
     background-color: #f4f4f4;
     padding: 10px;
-    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
 }
 
 .sidebar ul {
@@ -66,7 +66,8 @@ h2 {
     margin-bottom: 20px;
 }
 
-.profile-field, .info-field {
+.profile-field,
+.info-field {
     margin: 10px 0;
 }
 
@@ -85,11 +86,14 @@ table {
     margin-top: 20px;
 }
 
-table, th, td {
+table,
+th,
+td {
     border: 1px solid #ddd;
 }
 
-th, td {
+th,
+td {
     padding: 10px;
     text-align: left;
 }
@@ -106,35 +110,41 @@ tr:hover {
     background-color: #f1f1f1;
 }
 
-.details {
+.details-container{
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    flex: 1;
 }
 
 @media screen and (max-width: 700px) {
     .mentor-container {
         display: flex;
         flex-direction: column;
-      }
-    .sidebar {
-      width: 100%;
-      height: auto;
-      position: relative;
     }
-    div.content {margin-left: 0;}
-  }
-  
-  /* On screens that are less than 400px, display the bar vertically, instead of horizontally */
-  @media screen and (max-width: 400px) {
-    .sidebar a {
-      text-align: center;
-      float: none;
-    }
-  }
 
-  .sidebar.hidden {
-    display: none;
+    .details-container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    div.content {
+        margin-left: 0;
+    }
 }
 
+/* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+@media screen and (max-width: 400px) {
+    .sidebar a {
+        text-align: center;
+        float: none;
+    }
+}
+
+.sidebar.hidden {
+    display: none;
+}

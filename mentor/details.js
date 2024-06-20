@@ -335,6 +335,131 @@ window.onload = function() {
     else {
         document.getElementById('not-found').style.display = 'block';
         document.getElementById('details').style.display = 'none';
-        
     }
 }
+
+// function showMarks() {
+//     var enrollment = document.getElementById('enrollment').textContent;
+//     var semester = document.getElementById('semester').textContent;
+
+//     var marksTableBody = document.getElementById('marks-table-body');
+//     marksTableBody.innerHTML = '';
+
+//     var marksData = [
+//         { enrollment: '2020CSE001', semester: 'I', subject: 'Mathematics', marks: 90 },
+//         { enrollment: '2020CSE001', semester: 'I', subject: 'Physics', marks: 85 },
+//         { enrollment: '2020CSE001', semester: 'I', subject: 'Chemistry', marks: 80 },
+//         { enrollment: '2020CSE001', semester: 'I', subject: 'English', marks: 95 },
+//         { enrollment: '2020CSE001', semester: 'I', subject: 'Computer Science', marks: 100 },
+//         { enrollment: '2020CSE001', semester: 'I', subject: 'Physical Education', marks: 75 },
+//         { enrollment: '2020CSE001', semester: 'I', subject: 'Environmental Science', marks: 70 },
+//         { enrollment: '2020CSE001', semester: 'I', subject: 'Workshop', marks: 80 },
+//         { enrollment: '2020CSE001', semester: 'I', subject: 'Seminar', marks: 90 },
+//         { enrollment: '2020CSE001', semester: 'I', subject: 'Project', marks: 100 },
+//         { enrollment: '2020CSE001', semester: 'I', subject: 'Viva', marks: 100 },
+//         { enrollment: '2020CSE001', semester: 'I', subject: 'Assignment', marks: 90 },
+//         { enrollment: '2020CSE001', semester: 'I', subject: 'Quiz', marks: 85 },
+//         { enrollment: '2020CSE001', semester: 'I', subject: 'Test', marks: 90 },
+//         { enrollment: '2020CSE001', semester: 'I', subject: 'Mid Term', marks: 95 },
+//         { enrollment: '2020CSE001', semester: 'I', subject: 'Final Term', marks: 100 }
+//     ];
+
+//     var filteredMarksData = marksData.filter(function (item) {
+//         return item.enrollment === enrollment && item.semester === semester;
+//     });
+
+//     filteredMarksData.forEach(function (item) {
+//         var row = document.createElement('tr');
+//         var subjectCell = document.createElement('td');
+//         subjectCell.textContent = item.subject;
+//         var marksCell = document.createElement('td');
+//         marksCell.textContent = item.marks;
+//         row.appendChild(subjectCell);
+//         row.appendChild(marksCell);
+//         marksTableBody.appendChild(row);
+//     });
+// }
+
+// function showAttendance() {
+// //     //option to select semester
+// //     var semester = document.getElementById('semester').value;
+
+//     var enrollment = document.getElementById('enrollment').textContent;
+//     var semester = document.getElementById('semester').textContent;
+
+//     var attendanceTableBody = document.getElementById('attendance-table-body');
+//     attendanceTableBody.innerHTML = '';
+
+//     var attendanceData = [
+//         { enrollment: '2020CSE001', semester: 'I', subject: 'Mathematics', totalClasses: 100, attendedClasses: 90 },
+//         { enrollment: '2020CSE001', semester: 'I', subject: 'Physics', totalClasses: 100, attendedClasses: 85 },
+//         { enrollment: '2020CSE001', semester: 'I', subject: 'Chemistry', totalClasses: 100, attendedClasses: 80 },
+//         { enrollment: '2020CSE001', semester: 'I', subject: 'English', totalClasses: 100, attendedClasses: 95 },
+//         { enrollment: '2020CSE001', semester: 'I', subject: 'Computer Science', totalClasses: 100, attendedClasses: 100 },
+//         { enrollment: '2020CSE001', semester: 'I', subject: 'Physical Education', totalClasses: 100, attendedClasses: 75 },
+//         { enrollment: '2020CSE001', semester: 'I', subject: 'Environmental Science', totalClasses: 100, attendedClasses: 70 },
+//         { enrollment: '2020CSE001', semester: 'I', subject: 'Workshop', totalClasses: 100, attendedClasses: 80 },
+//         { enrollment: '2020CSE001', semester: 'I', subject: 'Seminar', totalClasses: 100, attendedClasses: 90 },
+//         { enrollment: '2020CSE001', semester: 'I', subject: 'Project', totalClasses: 100, attendedClasses: 100 },
+//         { enrollment: '2020CSE001', semester: 'I', subject: 'Viva', totalClasses: 100, attendedClasses: 100 },
+//         { enrollment: '2020CSE001', semester: 'I', subject: 'Assignment', totalClasses: 100, attendedClasses: 90 },
+//         { enrollment: '2020CSE001', semester: 'I', subject: 'Quiz', totalClasses: 100, attendedClasses: 85 },
+//         { enrollment: '2020CSE001', semester: 'I', subject: 'Test', totalClasses: 100, attendedClasses: 90 },
+//         { enrollment: '2020CSE001', semester: 'I', subject: 'Mid Term', totalClasses: 100, attended: 95 },
+//         { enrollment: '2020CSE001', semester: 'I', subject: 'Final Term', totalClasses: 100, attendedClasses: 100 }
+//     ];
+
+//     var filteredAttendanceData = attendanceData.filter(function (item) {
+//         return item.enrollment === enrollment && item.semester === semester;
+//     });
+
+//     filteredAttendanceData.forEach(function (item) {
+//         var row = document.createElement('tr');
+//         var subjectCell = document.createElement('td');
+//         subjectCell.textContent = item.subject;
+//         var totalClassesCell = document.createElement('td');
+//         totalClassesCell.textContent = item.totalClasses;
+//         var attendedClassesCell = document.createElement('td');
+//         attendedClassesCell.textContent = item.attendedClasses;
+//         row.appendChild(subjectCell);
+//         row.appendChild(totalClassesCell);
+//         row.appendChild(attendedClassesCell);
+//         attendanceTableBody.appendChild(row);
+//     });
+// }
+
+// function showAchievements() {
+//     var enrollment = document.getElementById('enrollment ').textContent;
+//     var semester = document.getElementById('semester').textContent;
+
+//     var achievementsTableBody = document.getElementById('achievements-table-body');
+//     achievementsTableBody.innerHTML = '';
+
+//     var achievementsData = [
+//         { enrollment: '2020CSE001', semester: 'I', achievement: 'First Prize in Science Exhibition' },
+//         { enrollment: '2020CSE001', semester: 'I', achievement: 'Best Student of the Year' },
+//         { enrollment: '2020CSE001', semester: 'I', achievement: 'Best Project Award' },
+//         { enrollment: '2020CSE001', semester: 'I', achievement: 'Best Seminar Presentation' },
+//         { enrollment: '2020CSE001', semester: 'I', achievement: 'Best Workshop Participant' },
+//         { enrollment: '2020CSE001', semester: 'I', achievement: 'Best Quiz Performer' },
+//         { enrollment: '2020CSE001', semester: 'I', achievement: 'Best Test Performer' },
+//         { enrollment: '2020CSE001', semester: 'I', achievement: 'Best Assignment Performer' },
+//         { enrollment: '2020CSE001', semester: 'I', achievement: 'Best Viva Performer' },
+//         { enrollment: '2020CSE001', semester: 'I', achievement: 'Best Mid Term Performer' },
+//         { enrollment: '2020CSE001', semester: 'I', achievement: 'Best Final Term Performer' }
+//     ];
+
+//     var filteredAchievementsData = achievementsData.filter(function (item) {
+//         return item.enrollment === enrollment && item.semester === semester;
+//     });
+
+//     filteredAchievementsData.forEach(function (item) {
+//         var row = document.createElement('tr');
+//         var achievementCell = document.createElement('td');
+//         achievementCell.textContent = item.achievement;
+//         row.appendChild(achievementCell);
+//         achievementsTableBody.appendChild(row);
+//     });
+
+// }
+

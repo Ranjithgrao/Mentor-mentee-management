@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="mentor.css">
     <script src="details.js" type="application/javascript"></script>
+    <script src="../scripts.js"></script>
 </head>
 
 <body>
@@ -17,18 +18,110 @@
             <h1>Department of Computer Science and Engineering</h1>
         </div>
     </nav>
-    <div class="details">
-        <h1>Student Details</h1>
-        <div id="details">
-            <p>Name: <span id="name"></span></p>
-            <p>Enrollment Number: <span id="enrollment"></span></p>
-            <p>Semester: <span id="semester"></span></p>
-            <p>Email ID: <span id="email"></span></p>
-            <p>Mobile Number: <span id="mobile"></span></p>
-            <p>Father's Name: <span id="father_name"></span></p>
-            <p>Course: <span id="course"></span></p>
+    <div class="details-container">
+        <!-- <button id="sidebarToggle">Toggle Sidebar</button> -->
+        <div class="sidebar">
+            <ul>
+                <li><a href="#" onclick="showSection('profile')">Profile</a></li>
+                <li><a href="#" onclick="showSection('marks')">Marks</a></li>
+                <li><a href="#" onclick="showSection('attendance')">Attendance</a></li>
+                <li><a href="#" onclick="showSection('view_achievements')">View Achievements</a></li>
+            </ul>
         </div>
-        <p id="not-found" style="display: none;">Student details not found.</p>
+        <div class="content">
+            <div id="profile" class="section">
+                <h1>Student Details</h1>
+                <div id="details">
+                    <p>Name: <span id="name"></span></p>
+                    <p>Enrollment Number: <span id="enrollment"></span></p>
+                    <p>Semester: <span id="semester"></span></p>
+                    <p>Email ID: <span id="email"></span></p>
+                    <p>Mobile Number: <span id="mobile"></span></p>
+                    <p>Father's Name: <span id="father_name"></span></p>
+                    <p>Course: <span id="course"></span></p>
+                </div>
+                <p id="not-found" style="display: none;">Student details not found.</p>
+            </div>
+            <div id="marks" class="section">
+                <h2>Student Marks</h2>
+                <div class="marks-header">
+                    <label for="semester">Year/Semester:</label>
+                    <select id="semester" name="semester">
+                        <option value="I">I</option>
+                        <option value="II">II</option>
+                        <option value="III">III</option>
+                        <option value="IV">IV</option>
+                        <option value="V">V</option>
+                        <option value="VI">VI</option>
+                        <option value="VII">VII</option>
+                        <option value="VIII">VIII</option>
+                    </select>
+                    <button onclick="showMarks()">Show</button>
+                    <button onclick="printPage()">Print</button>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Subject Code</th>
+                            <th>Marks</th>
+                        </tr>
+                    </thead>
+                    <tbody id="marks-table-body">
+                        <!-- Marks will be dynamically populated here -->
+                    </tbody>
+                </table>
+            </div>
+            <div id="attendance" class="section">
+                <h2>Attendance</h2>
+                <div class="attendance-header">
+                    <label for="semester">Year/Semester:</label>
+                    <select id="semester" name="semester">
+                        <option value="I">I</option>
+                        <option value="II">II</option>
+                        <option value="III">III</option>
+                        <option value="IV">IV</option>
+                        <option value="V">V</option>
+                        <option value="VI">VI</option>
+                        <option value="VII">VII</option>
+                        <option value="VIII">VIII</option>
+                    </select>
+                    <button onclick="showAttendance()">Show</button>
+                    <button onclick="printPage()">Print</button>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Subject Code</th>
+                            <th>Total Classes</th>
+                            <th>Classes Attended</th>
+                            <th>Attendance</th>
+                        </tr>
+                    </thead>
+                    <tbody id="attendance-table-body">
+                        <!-- Attendance will be dynamically populated here -->
+                    </tbody>
+                </table>
+            </div>
+            <div id="view_achievements" class="section">
+                <h2>Achievements</h2>
+                <div class="achievements header">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Mentee Name</th>
+                                <th>Achievement Type</th>
+                                <th>Description</th>
+                                <th>File</th>
+                                <th>Date Submitted</th>
+                            </tr>
+                        </thead>
+                        <tbody id="achievements-table-body">
+                            <!-- Achievements will be dynamically populated here -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
     </div>
     <footer>
         <div class="footer">

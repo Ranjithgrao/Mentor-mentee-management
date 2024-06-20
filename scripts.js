@@ -6,6 +6,12 @@ function showSection(sectionId) {
     document.getElementById(sectionId).style.display = 'block';
 }
 
+function toggleSidebar() {
+    const sidebar = document.getElementById('sidebar');
+    sidebar.classList.toggle('active');
+}
+
+
 function showMarks() {
     var semester = document.getElementById('semester').value;
 
@@ -79,10 +85,10 @@ document.addEventListener('DOMContentLoaded', function () {
     showSection('profile');
 });
 
-document.getElementById('sidebarToggle').addEventListener('click', function () {
-    var sidebar = document.querySelector('.sidebar');
-    sidebar.classList.toggle('hidden');
-});
+// document.getElementById('sidebarToggle').addEventListener('click', function () {
+//     var sidebar = document.querySelector('.sidebar');
+//     sidebar.classList.toggle('hidden');
+// });
 
 function showAttendance() {
     var semester = document.getElementById('semester').value;
