@@ -124,7 +124,25 @@
                     </tbody>
                 </table>
             </div>
-            <div id="achievements" class="section" style="display:none;">Achievements Section: Your achievements!</div>
+            <div id="achievements" class="section" style="display:none;">
+                <h2>Section: Your achievements!</h2>
+                <div class="achievements header">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Mentee Name</th>
+                                <th>Achievement Type</th>
+                                <th>Description</th>
+                                <th>File</th>
+                                <th>Date Submitted</th>
+                            </tr>
+                        </thead>
+                        <tbody id="achievements-table-body">
+                            <!-- Achievements will be dynamically populated here -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
             <div id="apply_achievements" class="section">
                 <h2>Apply for Achievements</h2>
                 <form action="apply_achievements.php" method="POST">

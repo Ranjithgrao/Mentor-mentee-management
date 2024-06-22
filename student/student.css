@@ -8,8 +8,6 @@ body {
 }
 
 .header {
-    background-color: #4CAF50;
-    color: white;
     display: flex;
     align-items: center;
     padding: 10px;
@@ -148,7 +146,6 @@ h2 {
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 20px;
 }
 
 table, th, td {
